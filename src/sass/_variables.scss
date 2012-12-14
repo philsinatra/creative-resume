@@ -1,0 +1,14 @@
+$maxContain: 900px;
+
+$borderRadius: 16px;
+
+// Color
+$primary: cs-primary(#3300cc);
+$secondary: darken(cs-secondary(), 10%); // too light, darkening this up a bit.
+$tertiary: cs-tertiary();
+$quadrary: cs-quadrary();
+
+// Fonts
+$headingFontFamily: LeagueGothicRegular, Helvetica, Arial, sans-serif;
+$baseFontFamily:  Helvetica, Arial, sans-serif;
+$baseFontSize: 62.5%;

@@ -1,0 +1,312 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+@import "compass/reset";
+@import "bourbon";
+@import "color-schemer";
+
+//@import "debug";
+@import "grid";
+@import "mixins";
+@import "fonts";
+@import "variables";
+@import "utilities";
+@import "sprites";
+
+img, embed, object, video {
+	max-width: 100%;
+}
+
+html {
+	@include background-image(linear-gradient(#b3b3b1 0, #252525 100%));
+	font-size: $baseFontSize;
+//	height: 100%;
+}
+
+body {
+	font-smoothing: antialiased;
+	text-rendering: optimizeLegibility;
+	-webkit-text-size-adjust: none;
+	-webkit-touch-callout: none;
+//	-webkit-user-select: none;
+	-webkit-font-smoothing: antialiased;
+	
+	font-family: $baseFontFamily;
+	@include font-size(1.4);
+}
+
+.contain {
+	@include background-image(linear-gradient(#fff 0, #fff 50%, #efefef 100%));
+	@include box-shadow(2px 2px 5px 3px hsla(0, 0%, 0%, 0.35));	
+	margin: 0 auto;
+	min-height: 600px;
+	$padding: 40px;
+	max-width: $maxContain - ($padding);
+	padding: 80px $padding $padding;
+	
+	@media screen and (min-width: 1024px) {
+		margin: 50px auto;
+	}
+}
+
+#hello {
+	@include content-block;
+	background: rgb(152, 197, 226);	
+	@include border-bottom-left-radius($borderRadius);
+	@include border-top-right-radius($borderRadius);	
+	float: right;
+	font-family: $headingFontFamily;
+	position: relative;
+	text-align: center;
+	text-transform: uppercase;
+	width: 33%;
+	
+	@media screen and (min-width: 768px) {
+		padding: .2em;
+		top: 2px;	
+	}
+
+	@media screen and (min-width: 1024px) {
+		padding: .1em;	
+		top: 32px;	
+	}
+}
+
+#photo {
+	background: rgb(152, 197, 226);	
+	@include border-bottom-right-radius($borderRadius);	
+	@include border-top-left-radius($borderRadius);
+	float: left;
+	position: relative;
+	text-align: center;
+	width: 60%;
+
+	@media screen and (min-width: 768px) {
+		height: 133px;
+		padding: .2em;
+		top: 34px;		
+	}
+
+	@media screen and (min-width: 1024px) {
+		height: 160px;
+		padding: .3em;
+		top: 47px;	
+	}	
+	
+	img {
+		@include border-bottom-right-radius($borderRadius);	
+		@include border-top-left-radius($borderRadius);
+		margin-top: 13px;
+		width: 80%;	
+	}
+}
+
+.myname {
+	@include category-heading;
+	color: rgb(152, 197, 226);
+}
+
+.personaldetails {
+	@include category-heading;
+	color: rgb(145, 177, 199);		
+}
+
+#personaldetails {
+	@include content-block;
+	background: rgb(145, 177, 199);
+	@include border-bottom-right-radius($borderRadius);	
+	@include border-top-left-radius($borderRadius);	
+//	height: 110px;
+	padding: 1.1em;	
+	position: relative;
+	
+	@media screen and (min-width: 768px) {
+		top: 84px;
+	}
+
+	@media screen and (min-width: 1024px) {
+		top: 137px;
+	}
+	
+}
+
+.employment {
+	@include category-heading;
+	color: rgb(129, 157, 176);		
+}
+
+#employment {
+	@include content-block;
+	background: rgb(129, 157, 176);		
+	@include border-bottom-right-radius($borderRadius);	
+	@include border-top-left-radius($borderRadius);	
+	height: 170px;
+	padding: 1.1em;	
+	position: relative;
+	width: 92%;
+	
+	@media screen and (min-width: 768px) {
+		top: 105px
+	}
+
+	@media screen and (min-width: 1024px) {
+		top: 188px;	
+	}
+	
+
+	a {
+		color: #fff;
+		text-decoration: none;
+		@include transition (color 0.3s ease-in-out);
+	}
+	
+	a:hover {
+		color: tint(rgb(152, 197, 226), 40%);
+
+	}
+	
+	h1 {
+		font-family: $headingFontFamily;
+		@include font-size(3.6);
+		text-transform: uppercase;
+	}
+	
+	p {
+		margin: 10px 0 20px;
+	}
+}
+
+.education {
+	@include category-heading;
+	color: rgb(103, 121, 141);		
+}
+
+#education {
+	@include content-block;
+	background: rgb(103, 121, 141);		
+	@include border-bottom-right-radius($borderRadius);	
+	@include border-top-left-radius($borderRadius);	
+	float: right;
+	height: 170px;	
+	min-width: 90%;
+	padding: 1.1em;
+	position: relative;
+	
+	@media screen and (min-width: 768px) {
+		top: 188px;
+	}
+
+	@media screen and (min-width: 1024px) {
+		top: 337px;	
+	}
+	
+	
+	h1 {
+		font-family: $headingFontFamily;
+		@include font-size(3.6);
+		text-transform: uppercase;
+	}
+	
+	p {
+		margin: 10px 0 20px;
+	}
+}
+
+.skills {
+	@include category-heading;
+	color: rgb(135, 128, 141);		
+}
+
+#skills {
+	@include content-block;
+	background: rgb(135, 128, 141);		
+	@include border-bottom-left-radius($borderRadius);	
+	@include border-top-right-radius($borderRadius);	
+	float: left;
+	padding: 1.1em;
+	position: relative;
+	width: 92%;
+	
+	@media screen and (min-width: 768px) {
+		top: 170px;	
+	}
+
+	@media screen and (min-width: 1024px) {
+		top: 267px;
+	}
+}
+
+.techskills {
+	@include category-heading;
+	color: rgb(181, 143, 166);		
+}
+
+#techskills {
+	@include content-block;
+	background: rgb(181, 143, 166);		
+	@include border-bottom-right-radius($borderRadius);	
+	@include border-top-left-radius($borderRadius);	
+	float: right;
+	min-width: 90%;
+	padding: 1.1em;
+	position: relative;
+	
+	@media screen and (min-width: 768px) {
+		top: 208px;
+	}
+
+	@media screen and (min-width: 1024px) {
+		top: 412px;
+	}	
+}
+
+.contact {
+	@include category-heading;
+	color: rgb(216, 156, 182);		
+}
+
+#contact {
+	@include content-block;
+	background: rgb(216, 156, 182);		
+	@include border-bottom-right-radius($borderRadius);	
+	@include border-top-left-radius($borderRadius);	
+	float: left;
+	padding: 1.1em;
+	position: relative;
+	width: 92%;
+	
+	@media screen and (min-width: 768px) {
+		top: 385px;
+	}
+
+	@media screen and (min-width: 1024px) {
+		top: 607px;	
+	}	
+	
+	a {
+		color: #fff;
+		text-decoration: none;
+		@include transition (color 0.3s ease-in-out);
+	}
+	
+	a:hover {
+		color: darken(rgb(216, 156, 182), 30%);
+	}	
+}
+
+table.data {
+	@include font-size(1.4);
+	width: 100%;
+	
+	th, td {
+		padding: 5px;
+	}
+	
+	th {
+		padding-right: 10px;
+		text-transform: uppercase;
+		vertical-align: top;
+	}
+}
