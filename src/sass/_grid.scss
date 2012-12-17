@@ -1,34 +1,28 @@
-.row {
-	margin-left: -1%;
+$total-columns: 3;
+$column-width: 33%;
+$gutter-width: 0.1%;
+$grid-padding: $gutter-width;
+
+.contain {
+	.row {
+		@include container;
+
+		.attribute-left,
+		.attribute-title,
+		.attribute-right {
+			@include span-columns(1);
+		}
+	}
 }
 
-[class*="span"] {
-//	display: block;
-	display: inline;
-	float: left;
-	margin-left: 1%;
-//	min-width: 257px;
-//	width: 100%;
-	width: 32.3%;	
-//	background: #efefef;
-	
-//	@media screen and (min-width: 768px) {
-//		display: inline;
+//	.attribute-left {
+//		background: #efefef;
 //	}
-}
-
-//@media screen and (max-width: 767px) {
-//	.span-one-third {
-//		margin-bottom: 10px;
+//
+//	.attribute-title {
+//		background: #efefef;
 //	}
-//}
-
-//@media screen and (min-width: 768px) {
-//	.span-one-third {
-//		width: 30%;
+//
+//	.attribute-right {
+//		background: #efefef;
 //	}
-//}
-
-.clearfix:before, .clearfix:after { content: ""; display: table; }
-.clearfix:after { clear: both; }
-.clearfix { zoom: 1; }
