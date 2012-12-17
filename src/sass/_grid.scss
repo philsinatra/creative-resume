@@ -1,5 +1,6 @@
 .row {
-	margin-left: -1%;
+//	margin-left: -1%;
+	margin: 0 auto;
 }
 
 [class*="span"] {
@@ -9,9 +10,10 @@
 	margin-left: 1%;
 //	min-width: 257px;
 //	width: 100%;
-	width: 32.3%;	
+//	width: 32.3%;
+	width: 300px;
 //	background: #efefef;
-	
+
 //	@media screen and (min-width: 768px) {
 //		display: inline;
 //	}
