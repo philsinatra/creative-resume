@@ -6,6 +6,7 @@
 @import "compass/reset";
 @import "bourbon";
 @import "color-schemer";
+@import "compass/css3/border-radius";
 
 //@import "debug";
 @import "grid";
@@ -20,7 +21,9 @@ img, embed, object, video {
 }
 
 html {
-	@include background-image(linear-gradient(#b3b3b1 0, #252525 100%));
+//	@include background-image(linear-gradient(#b3b3b1 0, #252525 100%));
+	@include background-image(linear-gradient(#fff 0, #fff 50%, #efefef 100%));
+	background: white;
 	font-size: $baseFontSize;
 //	height: 100%;
 }
@@ -38,8 +41,8 @@ body {
 }
 
 .contain {
-	@include background-image(linear-gradient(#fff 0, #fff 50%, #efefef 100%));
-	@include box-shadow(2px 2px 5px 3px hsla(0, 0%, 0%, 0.35));
+
+//	@include box-shadow(2px 2px 5px 3px hsla(0, 0%, 0%, 0.35));
 	margin: 0 auto;
 	min-height: 600px;
 	$padding: 40px;

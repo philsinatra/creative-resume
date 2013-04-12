@@ -27,5 +27,5 @@ $(document).ready(function() {
 	
 	setTimeout(function() {
 		$('html').removeClass('hide');		
-	}, 2000);
+	}, 1000);
 });
