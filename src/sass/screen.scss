@@ -280,13 +280,13 @@ body {
 	position: relative;
 	width: 92%;
 
-//	@media screen and (min-width: 768px) {
-//		top: 385px;
-//	}
-//
-//	@media screen and (min-width: 1024px) {
-		top: 735px;
-//	}
+	@media screen and (min-width: 768px) {
+		top: 719px;
+	}
+
+	@media screen and (min-width: 1024px) {
+		top: 714px;
+	}
 
 	a {
 		color: #fff;
